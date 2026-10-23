@@ -277,39 +277,32 @@
 
   const menuToggle = document.querySelector(".mobile-menu-toggle");
   const mobileNav = document.getElementById("mobile-navigation");
+  const siteHeader = document.querySelector(".site-header");
+  const setMobileNavOpen = (open, returnFocus = false) => {
+    menuToggle.setAttribute("aria-expanded", String(open));
+    menuToggle.setAttribute("aria-label", open ? "Close navigation" : "Open navigation");
+    mobileNav.hidden = !open;
+    if (returnFocus) menuToggle.focus();
+  };
+
   menuToggle.addEventListener("click", () => {
     const opening = menuToggle.getAttribute("aria-expanded") !== "true";
-    menuToggle.setAttribute("aria-expanded", String(opening));
-    menuToggle.setAttribute("aria-label", opening ? "Close navigation" : "Open navigation");
-    mobileNav.hidden = !opening;
+    setMobileNavOpen(opening);
   });
   mobileNav.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => {
-      mobileNav.hidden = true;
-      menuToggle.setAttribute("aria-expanded", "false");
-      menuToggle.setAttribute("aria-label", "Open navigation");
-    });
+    link.addEventListener("click", () => setMobileNavOpen(false));
   });
-  const navigationLinks = document.querySelectorAll(".desktop-nav a, .mobile-nav a");
-  const sections = ["calculator", "measurement", "framework"].map((id) => document.getElementById(id));
-  const updateCurrentSection = (id) => {
-    navigationLinks.forEach((link) => {
-      link.setAttribute("aria-current", link.getAttribute("href") === "#" + id ? "page" : "false");
-    });
-  };
-  if ("IntersectionObserver" in window) {
-    const sectionObserver = new IntersectionObserver((entries) => {
-      const visible = entries.filter((entry) => entry.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-      if (visible) updateCurrentSection(visible.target.id);
-    }, { rootMargin: "-18% 0px -62% 0px", threshold: [0.1, 0.35, 0.6] });
-    sections.forEach((section) => sectionObserver.observe(section));
-  }
+  document.addEventListener("click", (event) => {
+    if (menuToggle.getAttribute("aria-expanded") === "true" && !siteHeader.contains(event.target)) {
+      setMobileNavOpen(false);
+    }
+  });
   document.addEventListener("keydown", (event) => {
     if (event.key !== "Escape" || menuToggle.getAttribute("aria-expanded") !== "true") return;
-    mobileNav.hidden = true;
-    menuToggle.setAttribute("aria-expanded", "false");
-    menuToggle.setAttribute("aria-label", "Open navigation");
-    menuToggle.focus();
+    setMobileNavOpen(false, true);
+  });
+  window.matchMedia("(min-width: 761px)").addEventListener("change", (event) => {
+    if (event.matches) setMobileNavOpen(false);
   });
 
   calculate();
