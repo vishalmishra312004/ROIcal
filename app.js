@@ -290,6 +290,20 @@
       menuToggle.setAttribute("aria-label", "Open navigation");
     });
   });
+  const navigationLinks = document.querySelectorAll(".desktop-nav a, .mobile-nav a");
+  const sections = ["calculator", "measurement", "framework"].map((id) => document.getElementById(id));
+  const updateCurrentSection = (id) => {
+    navigationLinks.forEach((link) => {
+      link.setAttribute("aria-current", link.getAttribute("href") === "#" + id ? "page" : "false");
+    });
+  };
+  if ("IntersectionObserver" in window) {
+    const sectionObserver = new IntersectionObserver((entries) => {
+      const visible = entries.filter((entry) => entry.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+      if (visible) updateCurrentSection(visible.target.id);
+    }, { rootMargin: "-18% 0px -62% 0px", threshold: [0.1, 0.35, 0.6] });
+    sections.forEach((section) => sectionObserver.observe(section));
+  }
   document.addEventListener("keydown", (event) => {
     if (event.key !== "Escape" || menuToggle.getAttribute("aria-expanded") !== "true") return;
     mobileNav.hidden = true;
