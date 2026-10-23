@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#fff9ed" />
+    <title>Mirchi Radio | Effectiveness planner</title>
+    <meta name="description" content="Model radio campaign delivery, response KPIs and indicative ROI in one practical planning tool." />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Mirchi Radio | Effectiveness planner" />
+    <meta property="og:description" content="Model radio campaign delivery, response KPIs and indicative ROI in one practical planning tool." />
+    <meta property="og:image" content="assets/radio-mirchi-logo.png" />
+    <meta name="twitter:card" content="summary" />
+    <link rel="icon" type="image/png" href="assets/radio-mirchi-logo.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <div class="topline"><span>MIRCHI / RADIO EFFECTIVENESS</span><span>PLANNING DESK &nbsp;·&nbsp; INDIA</span></div>
+
+    <header class="site-header">
+      <div class="header-inner container">
+        <a class="brand" href="#main-content" aria-label="Mirchi home">
+          <img src="assets/radio-mirchi-logo.png" alt="Radio Mirchi 98.3 FM" />
+        </a>
+        <nav class="desktop-nav" aria-label="Main navigation">
+          <a href="#calculator" aria-current="page">Calculator</a>
+          <a href="#measurement">Measurement</a>
+          <a href="#framework">KPI framework</a>
+        </nav>
+        <button class="mobile-menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-navigation"><span></span><span></span></button>
+      </div>
+      <nav class="mobile-nav" id="mobile-navigation" aria-label="Mobile navigation" hidden>
+        <a href="#calculator" aria-current="page">Calculator</a><a href="#measurement">Measurement</a><a href="#framework">KPI framework</a>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <section class="hero container">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="issue-number">05</span> &nbsp; PROVING RADIO EFFECTIVENESS</p>
+          <h1>Make radio’s contribution easier to <em>see.</em></h1>
+          <p class="intro-copy">A practical campaign planner for the questions advertisers ask: who heard it, what changed, and did the commercial return justify the spend?</p>
+          <a class="text-link" href="#calculator">Build a campaign view <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="hero-stamp" aria-label="Radio measurement, on air">
+          <div class="stamp-top"><span class="on-air-dot"></span> ON AIR / ON RECORD</div>
+          <div class="equalizer" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="stamp-bottom"><span>ATTENTION</span><span>→</span><span>OUTCOME</span></div>
+          <p>Good measurement connects<br />the airtime to the action.</p>
+        </div>
+      </section>
+
+      <section class="calculator-section" id="calculator">
+        <div class="container">
+          <div class="section-heading">
+            <div><p class="eyebrow">CAMPAIGN PLANNER / 01</p><h2>Put the campaign on the board.</h2></div>
+            <p>Change any assumption. Delivery, response and return recalculate as you go.</p>
+          </div>
+
+          <div class="scenario-bar">
+            <div class="scenario-label"><span class="live-dot"></span><div><strong>Working scenario</strong><small>Illustrative inputs · replace with campaign data</small></div></div>
+            <div class="currency-switch" role="group" aria-label="Display currency">
+              <span>DISPLAY CURRENCY</span>
+              <button type="button" data-currency-choice="INR" aria-pressed="true">₹ INR</button>
+              <button type="button" data-currency-choice="USD" aria-pressed="false">$ USD</button>
+              <button type="button" data-currency-choice="EUR" aria-pressed="false">€ EUR</button>
+            </div>
+          </div>
+          <p class="currency-note">Currency changes the display symbol and number format; it does not convert entered amounts.</p>
+
+          <div class="calculator-layout">
+            <form id="radio-form" class="input-sheet" autocomplete="off">
+              <fieldset class="input-group">
+                <legend><span>01</span> Campaign &amp; audience</legend>
+                <div class="field-grid">
+                  <label class="field" for="spend"><span>Campaign spend <b data-symbol>₹</b></span><input id="spend" name="spend" type="number" min="0" step="1000" value="400000" inputmode="decimal" /></label>
+                  <label class="field" for="duration"><span>Campaign duration <small>weeks</small></span><input id="duration" name="duration" type="number" min="1" step="1" value="4" inputmode="numeric" /></label>
+                  <label class="field" for="spots"><span>Spots aired <small>total</small></span><input id="spots" name="spots" type="number" min="0" step="1" value="180" inputmode="numeric" /></label>
+                  <label class="field" for="audience"><span>Avg. audience per spot <small>listeners</small></span><input id="audience" name="audience" type="number" min="0" step="100" value="30000" inputmode="numeric" /></label>
+                  <label class="field" for="universe"><span>Target audience universe <small>people</small></span><input id="universe" name="universe" type="number" min="0" step="1000" value="10000000" inputmode="numeric" /></label>
+                  <label class="field" for="reach"><span>Measured net reach <small>% of target</small></span><input id="reach" name="reach" type="number" min="0" max="100" step="0.5" value="18" inputmode="decimal" /></label>
+                  <label class="field" for="category"><span>Advertiser category</span>
+                    <select id="category" name="category">
+                      <option value="retail" selected>Retail &amp; e-commerce</option>
+                      <option value="auto">Automotive &amp; dealers</option>
+                      <option value="fmcg">FMCG</option>
+                      <option value="education">Education</option>
+                      <option value="finance">Finance &amp; insurance</option>
+                      <option value="realestate">Real estate</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </label>
+                  <label class="field" for="objective"><span>Primary campaign objective</span>
+                    <select id="objective" name="objective">
+                      <option value="awareness">Awareness — reach and recall</option>
+                      <option value="search">Consideration — search and site visits</option>
+                      <option value="leads" selected>Response — enquiries and leads</option>
+                      <option value="footfall">Retail — footfall and dealer visits</option>
+                    </select>
+                  </label>
+                </div>
+                <p class="field-note">Use a consistent audience source for spot audience and target universe. Net reach should come from a deduplicated estimate or post-campaign study.</p>
+              </fieldset>
+
+              <fieldset class="input-group">
+                <legend><span>02</span> Compare the response</legend>
+                <p class="group-intro">Enter totals for equal-length windows: a baseline period and the campaign period.</p>
+                <div class="comparison-input-head"><span>Outcome</span><span>Baseline</span><span>Campaign</span></div>
+                <div class="comparison-input-row"><label for="visitsBase">Website visits</label><input id="visitsBase" name="visitsBase" type="number" min="0" value="8000" inputmode="numeric" aria-label="Website visits during baseline period" /><input id="visitsCampaign" name="visitsCampaign" type="number" min="0" value="10400" inputmode="numeric" aria-label="Website visits during campaign period" /></div>
+                <div class="comparison-input-row"><label for="searchBase">Brand searches</label><input id="searchBase" name="searchBase" type="number" min="0" value="3000" inputmode="numeric" aria-label="Brand searches during baseline period" /><input id="searchCampaign" name="searchCampaign" type="number" min="0" value="3900" inputmode="numeric" aria-label="Brand searches during campaign period" /></div>
+                <div class="comparison-input-row"><label for="leadsBase">Enquiries / leads</label><input id="leadsBase" name="leadsBase" type="number" min="0" value="120" inputmode="numeric" aria-label="Enquiries during baseline period" /><input id="leadsCampaign" name="leadsCampaign" type="number" min="0" value="150" inputmode="numeric" aria-label="Enquiries during campaign period" /></div>
+                <div class="comparison-input-row"><label for="footfallBase">Dealer / store visits</label><input id="footfallBase" name="footfallBase" type="number" min="0" value="900" inputmode="numeric" aria-label="Dealer visits during baseline period" /><input id="footfallCampaign" name="footfallCampaign" type="number" min="0" value="1140" inputmode="numeric" aria-label="Dealer visits during campaign period" /></div>
+                <p class="field-note">These are observed changes during the campaign. Seasonality, promotions and other media can also affect them.</p>
+              </fieldset>
+
+              <fieldset class="input-group">
+                <legend><span>03</span> Attribute a commercial return</legend>
+                <div class="field-grid">
+                  <label class="field" for="sales"><span>Sales attributed to campaign <small>orders</small></span><input id="sales" name="sales" type="number" min="0" value="30" inputmode="numeric" /></label>
+                  <label class="field" for="orderValue"><span>Average revenue per sale <b data-symbol>₹</b></span><input id="orderValue" name="orderValue" type="number" min="0" step="1000" value="50000" inputmode="decimal" /></label>
+                  <label class="field" for="margin"><span>Gross margin <small>%</small></span><input id="margin" name="margin" type="number" min="0" max="100" step="1" value="30" inputmode="decimal" /></label>
+                </div>
+                <p class="field-note">Use sales supported by a traceable method, such as a unique phone number, campaign URL, QR code, CRM source or matched-market study.</p>
+              </fieldset>
+              <div class="form-actions"><button class="button button-outline" id="reset-scenario" type="button">Reset example inputs</button><span>Edits stay in this browser.</span></div>
+            </form>
+
+            <aside class="results-panel" aria-label="Campaign results">
+              <div class="results-topline"><span>LIVE ESTIMATE</span><span id="objective-tag">RESPONSE CAMPAIGN</span></div>
+              <div class="return-lead" aria-live="polite">
+                <p class="result-kicker">MODELED RETURN ON INVESTMENT</p>
+                <div class="roi-line"><strong id="roi">12.5%</strong><span id="roi-status">positive<br />scenario</span></div>
+                <p class="result-explainer">Based on attributed gross contribution after campaign spend. Entered sales are assumed attributable.</p>
+              </div>
+
+              <div class="delivery-strip" aria-label="Radio delivery KPIs">
+                <div><span>GROSS IMPRESSIONS</span><strong id="impressions">5.4M</strong></div>
+                <div><span>EST. NET REACH</span><strong id="reach-people">1.8M</strong></div>
+                <div><span>AVG. FREQUENCY</span><strong id="frequency">3.0×</strong></div>
+                <div><span>GRPs</span><strong id="grps">54</strong></div>
+              </div>
+
+              <div class="return-details">
+                <div class="return-heading"><h3>Commercial return</h3><span>CAMPAIGN PERIOD</span></div>
+                <dl>
+                  <div><dt>Attributed revenue</dt><dd><span data-symbol>₹</span><span id="revenue">15,00,000</span></dd></div>
+                  <div><dt>Gross contribution</dt><dd><span data-symbol>₹</span><span id="contribution">4,50,000</span></dd></div>
+                  <div><dt>ROAS <small>revenue / spend</small></dt><dd id="roas">3.75×</dd></div>
+                  <div><dt>Cost per thousand impressions</dt><dd><span data-symbol>₹</span><span id="cpm">74</span></dd></div>
+                  <div><dt>Cost per campaign enquiry</dt><dd><span data-symbol>₹</span><span id="cpl">2,667</span></dd></div>
+                </dl>
+              </div>
+              <div class="money-chart">
+                <div class="chart-title"><h3>Spend against return</h3><span id="chart-scale">SAME SCALE</span></div>
+                <div class="money-row" data-money-row="spend"><div><span>Campaign spend</span><b class="money-value"></b></div><i><span></span></i></div>
+                <div class="money-row" data-money-row="contribution"><div><span>Gross contribution</span><b class="money-value"></b></div><i><span></span></i></div>
+                <div class="money-row" data-money-row="revenue"><div><span>Attributed revenue</span><b class="money-value"></b></div><i><span></span></i></div>
+              </div>
+              <p class="disclaimer">Scenario math, not proof of causation. Replace the example with campaign data and a credible attribution method before presenting results.</p>
+              <div class="report-action"><button class="button" id="download-report" type="button">Download campaign report <span aria-hidden="true">&darr;</span></button></div>
+            </aside>
+          </div>
+
+          <section class="outcomes-section" aria-labelledby="outcomes-heading">
+            <div class="outcomes-header"><div><p class="eyebrow">OBSERVED SIGNALS / 02</p><h2 id="outcomes-heading">What moved during the campaign?</h2></div><p>Baseline vs campaign period. Each row has its own scale.</p></div>
+            <div class="legend"><span><i class="legend-baseline"></i> Baseline</span><span><i class="legend-campaign"></i> Campaign</span><span>CHANGE <b>↑</b></span></div>
+            <div class="comparison-chart" id="comparison-chart" aria-live="polite">
+              <div class="comparison-row" data-comparison="visits"><div class="metric-name">Website visits<small>owned digital</small></div><div class="paired-bars"><div class="bar-track"><i class="baseline-bar"></i></div><div class="bar-track"><i class="campaign-bar"></i></div></div><div class="comparison-values"><span class="base-value"></span><span class="campaign-value"></span></div><strong class="change-value"></strong></div>
+              <div class="comparison-row" data-comparison="search"><div class="metric-name">Brand searches<small>active consideration</small></div><div class="paired-bars"><div class="bar-track"><i class="baseline-bar"></i></div><div class="bar-track"><i class="campaign-bar"></i></div></div><div class="comparison-values"><span class="base-value"></span><span class="campaign-value"></span></div><strong class="change-value"></strong></div>
+              <div class="comparison-row" data-comparison="leads"><div class="metric-name">Enquiries / leads<small>direct response</small></div><div class="paired-bars"><div class="bar-track"><i class="baseline-bar"></i></div><div class="bar-track"><i class="campaign-bar"></i></div></div><div class="comparison-values"><span class="base-value"></span><span class="campaign-value"></span></div><strong class="change-value"></strong></div>
+              <div class="comparison-row" data-comparison="footfall"><div class="metric-name">Dealer / store visits<small>offline action</small></div><div class="paired-bars"><div class="bar-track"><i class="baseline-bar"></i></div><div class="bar-track"><i class="campaign-bar"></i></div></div><div class="comparison-values"><span class="base-value"></span><span class="campaign-value"></span></div><strong class="change-value"></strong></div>
+            </div>
+            <p class="chart-footnote">Observed lift = (campaign period − baseline period) ÷ baseline period. Matching dates and markets improves the comparison; a control market helps separate radio effect from other influences.</p>
+          </section>
+        </div>
+      </section>
+
+      <section class="framework-section" id="framework">
+        <div class="container">
+          <div class="section-heading"><div><p class="eyebrow">A USEFUL RADIO SCORECARD / 03</p><h2>Pick the KPI that fits the brief.</h2></div><p>Radio can play different jobs. Agree on the outcome before the first spot airs.</p></div>
+          <div class="framework-grid">
+            <article><span class="framework-index">A / AWARENESS</span><h3>Did people notice?</h3><p>Net reach, average frequency, target rating points, ad recall and brand awareness.</p><small>Study: pre / post brand survey · audience source</small></article>
+            <article><span class="framework-index">B / CONSIDERATION</span><h3>Did interest rise?</h3><p>Branded search, direct traffic, campaign page visits, app opens and store locator use.</p><small>Study: search trends · tagged landing page</small></article>
+            <article><span class="framework-index">C / RESPONSE</span><h3>Did someone act?</h3><p>Calls, WhatsApp starts, QR scans, enquiries, qualified leads, sign-ups and cost per lead.</p><small>Study: unique number / URL · CRM source</small></article>
+            <article><span class="framework-index">D / RETAIL &amp; DEALER</span><h3>Did footfall convert?</h3><p>Dealer visits, store footfall, test drives, coupon use, POS sales and cost per visit.</p><small>Study: matched outlets · POS / dealer data</small></article>
+          </div>
+          <aside class="artist-feature" aria-label="Radio and artist storytelling">
+            <div class="artist-feature-copy">
+              <span class="artist-feature-label">ON AIR / IN CULTURE</span>
+              <h3>A voice people remember.<br /><em>A response you can measure.</em></h3>
+              <p>Pair the right artist and message with a clear campaign objective, then track recall, search, enquiries and visits.</p>
+            </div>
+            <img src="assets/radio-artist.png" alt="Illustration of a vocalist recording into a studio microphone" loading="lazy" />
+            <span class="artist-feature-mark" aria-hidden="true">LIVE<br />&amp; LOCAL</span>
+          </aside>
+          <div class="amplification-note"><span class="amplification-mark">+</span><div><strong>Count campaign amplification separately.</strong><p>Track creator mentions, social engagement, branded content reach and digital audio plays as supporting outputs. Keep them distinct from independently measured sales.</p></div><span class="amp-label">RADIO + ACTIVATION + DIGITAL</span></div>
+        </div>
+      </section>
+
+      <section class="measurement-section" id="measurement">
+        <div class="container measurement-layout">
+          <div><p class="eyebrow">HOW TO READ THIS MODEL / 04</p><h2>Delivery is one half of the proof.</h2><p class="measurement-copy">Airtime and audience estimates show what the campaign delivered. Response data shows what happened alongside it. An attribution design helps estimate what the campaign caused.</p></div>
+          <div class="formula-list">
+            <div><span>01</span><p><strong>Gross impressions</strong><br />Spots aired × average audience per spot</p></div>
+            <div><span>02</span><p><strong>Estimated frequency</strong><br />Gross impressions ÷ estimated net reach</p></div>
+            <div><span>03</span><p><strong>GRPs</strong><br />Gross impressions ÷ target audience × 100</p></div>
+            <div><span>04</span><p><strong>Modeled ROI</strong><br />(Attributed sales × margin − campaign spend) ÷ spend</p></div>
+          </div>
+        </div>
+        <div class="container source-note"><p><strong>Measurement note.</strong> Audience, reach and response inputs should come from the same market and campaign window. Radio industry definitions for reach, frequency and gross impressions are summarized by the <a href="https://www.rab.com/whyradio/faq/faqprint.cfm?id=35217" target="_blank" rel="noreferrer">Radio Advertising Bureau</a>. This prototype applies no external ROI benchmark.</p><p>For an actual case study, report the source, period, sample, comparison method and any other media or promotions running at the same time.</p></div>
+        <div class="container">
+          <aside class="equipment-feature" aria-label="Radio studio equipment">
+            <div class="equipment-copy">
+              <p class="eyebrow">BEHIND THE BROADCAST</p>
+              <h3>The studio tools behind every signal.</h3>
+              <p>Voice capture, mixing and monitoring bring each on-air message to life.</p>
+              <div class="equipment-tags" aria-label="Featured equipment"><span>Broadcast microphone</span><span>Mixing console</span><span>Studio headphones</span><span>Audio recorder</span></div>
+            </div>
+            <img src="assets/radio-equipment.png" alt="" aria-hidden="true" loading="lazy" />
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><div class="container footer-inner"><a class="brand" href="#main-content" aria-label="Radio Mirchi home"><img src="assets/radio-mirchi-logo.png" alt="Radio Mirchi 98.3 FM" /></a><p>Radio effectiveness planner · Prototype for discussion</p><a href="#calculator">Back to calculator ↑</a></div><div class="container footer-bottom"><span>© 2026 Mirchi</span><span>Illustrative values are not Radio Mirchi campaign results.</span></div></footer>
+    <script src="app.js" defer></script>
+  </body>
+</html>
